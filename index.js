@@ -1,4 +1,5 @@
 require("dotenv").config()
+
 const express = require("express")
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
@@ -20,6 +21,7 @@ const app =  express()
 
 const productsRoute = require("./src/routes/product")
 const videosRoute = require("./src/routes/video")
+const commentsRoute = require("./src/routes/comment")
 
 app.use(express.json())
 app.use(bodyParser.json())
@@ -31,3 +33,7 @@ app.listen(3000, () => {
 
 app.use("/api/products", productsRoute)
 app.use("/api/videos", videosRoute)
+app.use("/api/comments", commentsRoute)
+
+
+

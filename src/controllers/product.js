@@ -13,7 +13,8 @@ const createProductController =  async (req, res) => {
     try {
         const saveProduct = await newProduct.save()
         res.status(200).json(saveProduct)
-    } catch(err) {
+    } 
+    catch (err) {
         console.log(err);
         res.status(400).json({message: "Failed to save product to the database."})
     }
@@ -25,7 +26,8 @@ const getProductListController =  async (req, res) => {
     try {
         const products = await Product.find({videoId: videoId})
         res.status(200).json(products)
-    } catch(err) {
+    } 
+    catch (err) {
         console.log(err);
         res.status(400).json({message: "Failed to retrieve products to the database."})
     }
