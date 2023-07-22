@@ -36,4 +36,15 @@ npm install
 After you installed all of the dependencies then you can just start the server with this command:
 ```bash
 npm start
+````
+
+You can use [postman](https://www.postman.com/) to test all the API endpoint.
+
+## Note
+If you have trouble with database connection make sure that your mongodb is running. First, try run this command on your terminal:
+
+```bash
+mongod
 ```
+
+If it still doesn't work, open Service.msc from your computer search box, and find a MonngoDB then run the server.
