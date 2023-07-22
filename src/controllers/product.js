@@ -1,12 +1,13 @@
-const Product = require("../models/productsModel")
+const Product = require("../models/product")
 
 const createProductController =  async (req, res) => {
-    const { title, price, link } = req.body
+    const { title, price, link, videoId } = req.body
 
     const newProduct = new Product({
         title,
         price,
-        link
+        link,
+        videoId
     })
 
     try {
@@ -18,9 +19,11 @@ const createProductController =  async (req, res) => {
     }
 }
 
-const getProductsListController =  async (req, res) => {
+const getProductListController =  async (req, res) => {
+    const videoId = req.params.videoId
+
     try {
-        const products = await Product.find()
+        const products = await Product.find({videoId: videoId})
         res.status(200).json(products)
     } catch(err) {
         console.log(err);
@@ -28,4 +31,4 @@ const getProductsListController =  async (req, res) => {
     }
 }
 
-module.exports = { createProductController, getProductsListController }
+module.exports = { createProductController, getProductListController }

@@ -18,7 +18,8 @@ database.once("connected", () => {
 
 const app =  express()
 
-const productsRoute = require("./routes/productsRoute")
+const productsRoute = require("./src/routes/product")
+const videosRoute = require("./src/routes/video")
 
 app.use(express.json())
 app.use(bodyParser.json())
@@ -29,5 +30,4 @@ app.listen(3000, () => {
 })
 
 app.use("/api/products", productsRoute)
-
-
+app.use("/api/videos", videosRoute)
