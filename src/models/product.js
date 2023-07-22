@@ -13,8 +13,9 @@ const ProductSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    video_id: {
-        type: mongoose.ObjectId
+    video: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Video",
     }
 }, { timestamps: true })
 

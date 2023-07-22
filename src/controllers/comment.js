@@ -4,7 +4,7 @@ const getVideoCommentListController = async (req, res) => {
     const videoId = req.params.videoId
     
     try {
-        const comments = await Comment.find({ video_id: videoId })
+        const comments = await Comment.find({ video: videoId })
         res.status(200).json(comments)
     }
     catch (err) {
@@ -19,7 +19,7 @@ const createCommentController = async (req, res) => {
     const comment = new Comment({
         username,
         content,
-        video_id: videoId
+        video: videoId
     })
 
     try {

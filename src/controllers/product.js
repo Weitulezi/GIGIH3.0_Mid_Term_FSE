@@ -7,11 +7,8 @@ const createProductController =  async (req, res) => {
         title,
         price,
         link,
+        video: videoId
     })
-    
-    if (videoId !== undefined) {
-        newProduct.video_id = videoId
-    }
 
     try {
         const saveProduct = await newProduct.save()
@@ -27,7 +24,7 @@ const getProductListController =  async (req, res) => {
     const videoId = req.params.videoId
 
     try {
-        const products = await Product.find({video_id: videoId})
+        const products = await Product.find({video: videoId})
         res.status(200).json(products)
     } 
     catch (err) {
