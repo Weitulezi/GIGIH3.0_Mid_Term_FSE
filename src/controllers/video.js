@@ -28,4 +28,17 @@ const getVideoListController =  async (req, res) => {
     }
 }
 
-module.exports = { getVideoListController, createVideoController }
+const getVideoController =  async (req, res) => {
+    const videoId = req.params.videoId
+
+    try {
+        const videos = await Video.findById(videoId)
+        res.status(200).json(videos)
+    } 
+    catch (err) {
+        console.log(err);
+        res.status(400).json({message: "Failed to retrieve videos."})
+    }
+}
+
+module.exports = { getVideoListController, createVideoController, getVideoController }
