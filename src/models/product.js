@@ -13,9 +13,11 @@ const ProductSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    videoId: {
+    video_id: {
         type: mongoose.ObjectId
     }
-})
+}, { timestamps: true })
+
+
 
 module.exports = mongoose.model("Product", ProductSchema)

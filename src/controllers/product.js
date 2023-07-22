@@ -7,7 +7,7 @@ const createProductController =  async (req, res) => {
         title,
         price,
         link,
-        videoId
+        video_id: videoId
     })
 
     try {
@@ -24,7 +24,7 @@ const getProductListController =  async (req, res) => {
     const videoId = req.params.videoId
 
     try {
-        const products = await Product.find({videoId: videoId})
+        const products = await Product.find({video_id: videoId})
         res.status(200).json(products)
     } 
     catch (err) {

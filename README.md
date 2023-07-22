@@ -2,7 +2,7 @@
 
 ## Installation
 
-You need to install a some modules with npm
+You need to install a some dependencies with npm
 
 ```bash
 npm install express mongoose nodemon body-parser dotenv
