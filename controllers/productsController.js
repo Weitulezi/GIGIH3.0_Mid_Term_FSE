@@ -18,4 +18,14 @@ const createProductController =  async (req, res) => {
     }
 }
 
-module.exports = { createProductController }
+const getProductsListController =  async (req, res) => {
+    try {
+        const products = await Product.find()
+        res.status(200).json(products)
+    } catch(err) {
+        console.log(err);
+        res.status(400).json({message: "Failed to retrieve products to the database."})
+    }
+}
+
+module.exports = { createProductController, getProductsListController }
