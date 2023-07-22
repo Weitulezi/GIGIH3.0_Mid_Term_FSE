@@ -1,6 +1,6 @@
 const Product = require("../models/productsModel")
 
-const productListController =  async (req, res) => {
+const createProductController =  async (req, res) => {
     const { title, price, link } = req.body
 
     const newProduct = new Product({
@@ -18,4 +18,4 @@ const productListController =  async (req, res) => {
     }
 }
 
-module.exports = { productListController }
+module.exports = { createProductController }

@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 const { 
-    productListController
+    createProductController
  } = require("../controllers/productsController")
 
-router.get("/", productListController)
-router.post("/", productListController)
+// router.get("/", getProductListController)
+router.post("/", createProductController)
 
 
 module.exports = router
