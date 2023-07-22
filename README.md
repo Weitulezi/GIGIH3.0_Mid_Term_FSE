@@ -10,17 +10,17 @@ Here is some feature of the project:
 * API
     1. `POST` /api/videos
        - Create video.
-    1. `GET` /api/videos
+    2. `GET` /api/videos
        - Get list of videos collections.
-    1. `GET` /api/videos/:id
+    3. `GET` /api/videos/:id
        - Get a video by Id.
-    1. `POST` /api/products
+    4. `POST` /api/products
        - Create a product and associate it with a video.
-    1. `GET` /api/products/:videoId
+    5. `GET` /api/products/:videoId
        - Get list products of a video using video id as params.
-    1. `POST` /api/comments
+    6. `POST` /api/comments
        - Create a comment for a video.
-    1. `POST` /api/comments/:videoId
+    7. `POST` /api/comments/:videoId
        - Get list comments of a video using video id as params.
 
 ## Installation
