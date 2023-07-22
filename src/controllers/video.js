@@ -13,7 +13,7 @@ const createVideoController =  async (req, res) => {
     } 
     catch (err) {
         console.log(err);
-        res.status(400).json({message: "Failed to save video to the database."})
+        res.status(400).json({message: "Failed to create video."})
     }
 }
 
@@ -24,7 +24,7 @@ const getVideoListController =  async (req, res) => {
     } 
     catch (err) {
         console.log(err);
-        res.status(400).json({message: "Failed to retrieve videos from the database."})
+        res.status(400).json({message: "Failed to retrieve videos."})
     }
 }
 

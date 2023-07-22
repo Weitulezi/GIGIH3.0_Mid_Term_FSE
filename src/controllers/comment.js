@@ -9,7 +9,7 @@ const getVideoCommentListController = async (req, res) => {
     }
     catch (err) {
         console.log(err);
-        res.status(400).json({ message: "failed tor retrieve comments" })
+        res.status(400).json({ message: "Failed tor retrieve comments" })
     }
 }
 
@@ -24,11 +24,11 @@ const createCommentController = async (req, res) => {
 
     try {
         const saveComment = await comment.save()
-        res.status(200).json({ success: true })
+        res.status(200).json({ success: true, message: "Comment is successfully created." })
     }
     catch (err) {
         console.log(err);
-        res.status(400).json({ success: false })
+        res.status(400).json({ success: false, message: "Failed to create the comment." })
     }
 }
 

@@ -7,8 +7,11 @@ const createProductController =  async (req, res) => {
         title,
         price,
         link,
-        video_id: videoId
     })
+    
+    if (videoId !== undefined) {
+        newProduct.video_id = videoId
+    }
 
     try {
         const saveProduct = await newProduct.save()
@@ -16,7 +19,7 @@ const createProductController =  async (req, res) => {
     } 
     catch (err) {
         console.log(err);
-        res.status(400).json({message: "Failed to save product to the database."})
+        res.status(400).json({message: "Failed to create product."})
     }
 }
 
@@ -29,7 +32,7 @@ const getProductListController =  async (req, res) => {
     } 
     catch (err) {
         console.log(err);
-        res.status(400).json({message: "Failed to retrieve products to the database."})
+        res.status(400).json({message: "Failed to retrieve products."})
     }
 }
 
