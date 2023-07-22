@@ -12,6 +12,9 @@ const ProductSchema = new mongoose.Schema({
     link: {
         required: true,
         type: String
+    },
+    videoId: {
+        type: mongoose.ObjectId
     }
 })
 

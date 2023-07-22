@@ -6,5 +6,7 @@ const {
  } = require("../controllers/productsController")
 
 router.get("/", productListController)
+router.post("/", productListController)
+
 
 module.exports = router
