@@ -41,10 +41,18 @@ npm start
 You can use [postman](https://www.postman.com/) to test all the API endpoint.
 
 ## Note
-If you have trouble with database connection make sure that your mongodb is running. First, try run this command on your terminal:
+If you have trouble with database connection like this,
+
+```bash
+MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+```
+
+ make sure that your mongodb is running. First, try run this command on your terminal:
 
 ```bash
 mongod
 ```
 
 If it still doesn't work, open Service.msc from your computer search box, and find a MonngoDB then run the server.
+
+![Services.msc](/assets/images/run-mongodb-server.png)
