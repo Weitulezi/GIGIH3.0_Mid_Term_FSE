@@ -40,11 +40,13 @@ Here is the schema of each collections:
          required: true
       },
       video: {
-         type: objectId,
+         type: objectId, // id of a document from video collections
          ref: "Video"
       },
    }
 ```
+
+From a schema w
 
 - Comment
 ```javascript
@@ -58,11 +60,13 @@ Here is the schema of each collections:
          required: true
       },
       video: {
-         type: objectId,
+         type: objectId, // id of a document from video collections
          ref: "Video"
       },
    }
 ```
+
+As you can see from the schema, both products and comments collections has a Many-To-One relationships with videos collections.
 
 ## API Structure
 
