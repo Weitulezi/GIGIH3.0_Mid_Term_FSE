@@ -4,9 +4,11 @@ This repository contain a code for tokopedia play clone (only backend) for **Gen
 
 The project using technologies such as **express** for backend and **mongoose** for database.
 
-## Feature (API)
 
-Here is some feature of the project:
+## Database Structure
+
+## API Structure
+
 * API
    1. `POST` /api/videos
        - This API endpoint is use to create a video. 
