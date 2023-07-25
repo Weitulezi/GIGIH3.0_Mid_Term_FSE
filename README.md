@@ -8,7 +8,7 @@ The project using technologies such as **express** for backend and **mongoose** 
 
 Here is some feature of the project:
 * API
-    1. `POST` /api/videos
+   1. `POST` /api/videos
        - This API endpoint is use to create a video. 
        - Url params : `None`
        - Headers : `Content-Type: application/json`
@@ -26,7 +26,7 @@ Here is some feature of the project:
                ```javascript
                   {<video_object>}
                ```            
-    2. `GET` /api/videos
+   2. `GET` /api/videos
          - This API endpoint is use to get a list of videos. 
          - Url params : `None`
          - Headers : `Content-Type: application/json`
@@ -38,7 +38,7 @@ Here is some feature of the project:
                ```javascript
                   [...<video_object>]
                ```      
-    3. `GET` /api/videos/:id
+   3. `GET` /api/videos/:id
          - This API endpoint is use to get a video base on its ID. 
          - Url params : `videoId`
          - Headers : `Content-Type: application/json`
@@ -50,7 +50,7 @@ Here is some feature of the project:
                ```javascript
                   {<video_object>}
                ```    
-    4. `POST` /api/products
+   4. `POST` /api/products
          - This API endpoint is use to create a products for of a single video. 
          - Url params : `None`
          - Headers : `Content-Type: application/json`
@@ -71,7 +71,7 @@ Here is some feature of the project:
                ```javascript
                {<product_object>}
                ```    
-    5. `GET` /api/products/:videoId
+   5. `GET` /api/products/:videoId
          - This API endpoint is get list of products base on videoId. 
          - Url params : `videoId`
          - Headers : `Content-Type: application/json`
@@ -83,7 +83,7 @@ Here is some feature of the project:
                ```javascript
                   [...<products_object>]
                ```    
-    6. `POST` /api/comments
+   6. `POST` /api/comments
          - This API endpoint is use to create a comment of a video. 
          - Url params : `None`
          - Headers : `Content-Type: application/json`
@@ -106,7 +106,7 @@ Here is some feature of the project:
                      message: string
                   }
                ```    
-    7. `POST` /api/comments/:videoId
+   7. `POST` /api/comments/:videoId
          - This API endpoint is use to get list of comments of a video base on videoId. 
          - Url params : `videoId`
          - Headers : `Content-Type: application/json`
