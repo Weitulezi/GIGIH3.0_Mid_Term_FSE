@@ -55,4 +55,4 @@ mongod
 
 If it still doesn't work, open Service.msc from your computer search box, and find a MonngoDB then run the server.
 
-<img src="/assets/images/run-mongodb-server.png" width="400px" height="auto">
+<img src="/assets/images/run-mongodb-server.png" width="600px" height="auto" margin="auto">
