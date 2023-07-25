@@ -46,8 +46,6 @@ Here is the schema of each collections:
    }
 ```
 
-From a schema w
-
 - Comment
 ```javascript
    {
@@ -197,9 +195,6 @@ After you installed all of the dependencies then you can just start the server w
 npm start
 ````
 
-You can use [postman](https://www.postman.com/) to test all the API endpoint.
-
-## Note
 If you have trouble with database connection like this,
 
 ```bash
@@ -215,3 +210,5 @@ mongod
 If it still doesn't work, open Service.msc from your computer search box, and find a MonngoDB then run the server.
 
 <img src="/assets/images/run-mongodb-server.png" width="600px" height="auto" margin="auto">
+
+You can use [postman](https://www.postman.com/) to test all the API endpoint.
