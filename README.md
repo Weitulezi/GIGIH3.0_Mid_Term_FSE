@@ -9,19 +9,105 @@ The project using technologies such as **express** for backend and **mongoose** 
 Here is some feature of the project:
 * API
     1. `POST` /api/videos
-       - Create video.
+       - This API endpoint is use to create a video. 
+       - Url params : `None`
+       - Headers : `Content-Type: application/json`
+       - Data params : 
+            ```javascript
+               {
+                  imageUrl: string,
+               }
+            ```            
+       - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+                  {<video_object>}
+               ```            
     2. `GET` /api/videos
-       - Get list of videos collections.
+         - This API endpoint is use to get a list of videos. 
+         - Url params : `None`
+         - Headers : `Content-Type: application/json`
+         - Data params : `None`    
+         - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+                  [...<video_object>]
+               ```      
     3. `GET` /api/videos/:id
-       - Get a video by Id.
+         - This API endpoint is use to get a video base on its ID. 
+         - Url params : `videoId`
+         - Headers : `Content-Type: application/json`
+         - Data params : `None`   
+         - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+                  {<video_object>}
+               ```    
     4. `POST` /api/products
-       - Create a product and associate it with a video.
+         - This API endpoint is use to create a products for of a single video. 
+         - Url params : `None`
+         - Headers : `Content-Type: application/json`
+         - Data params : 
+            ```javascript
+               {
+                  title: string,
+                  price: Number,
+                  link: string,
+                  videoId: string,
+               }
+            ```    
+         - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+               {<product_object>}
+               ```    
     5. `GET` /api/products/:videoId
-       - Get list products of a video using video id as params.
+         - This API endpoint is get list of products base on videoId. 
+         - Url params : `videoId`
+         - Headers : `Content-Type: application/json`
+         - Data params : `None`     
+         - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+                  [...<products_object>]
+               ```    
     6. `POST` /api/comments
-       - Create a comment for a video.
+         - This API endpoint is use to create a comment of a video. 
+         - Url params : `None`
+         - Headers : `Content-Type: application/json`
+         - Data params : 
+            ```javascript
+               {
+                  username: string,
+                  content: string,
+                  videoId: string,
+               }
+            ```    
+         - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+                  {
+                     success: true,
+                     message: string
+                  }
+               ```    
     7. `POST` /api/comments/:videoId
-       - Get list comments of a video using video id as params.
+         - This API endpoint is use to get list of comments of a video base on videoId. 
+         - Url params : `videoId`
+         - Headers : `Content-Type: application/json`
+         - Data params : `None`     
+         - Response : 
+            - Status Code : `200`       
+            - content 
+               ```javascript
+                  [...<comment_object>]
+               ```    
 
 ## Installation
 
