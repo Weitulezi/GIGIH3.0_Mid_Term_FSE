@@ -4,7 +4,7 @@ This repository contain a code for tokopedia play clone (only backend) for **Gen
 
 The project using technologies such as **express** for backend and **mongoose** for database.
 
-## Feature
+## Feature (API)
 
 Here is some feature of the project:
 * API
@@ -13,6 +13,7 @@ Here is some feature of the project:
        - Url params : `None`
        - Headers : `Content-Type: application/json`
        - Data params : 
+
             ```javascript
                {
                   imageUrl: string,
@@ -21,6 +22,7 @@ Here is some feature of the project:
        - Response : 
             - Status Code : `200`       
             - content 
+
                ```javascript
                   {<video_object>}
                ```            
@@ -32,6 +34,7 @@ Here is some feature of the project:
          - Response : 
             - Status Code : `200`       
             - content 
+
                ```javascript
                   [...<video_object>]
                ```      
@@ -43,6 +46,7 @@ Here is some feature of the project:
          - Response : 
             - Status Code : `200`       
             - content 
+
                ```javascript
                   {<video_object>}
                ```    
@@ -51,6 +55,7 @@ Here is some feature of the project:
          - Url params : `None`
          - Headers : `Content-Type: application/json`
          - Data params : 
+
             ```javascript
                {
                   title: string,
@@ -62,6 +67,7 @@ Here is some feature of the project:
          - Response : 
             - Status Code : `200`       
             - content 
+
                ```javascript
                {<product_object>}
                ```    
@@ -73,6 +79,7 @@ Here is some feature of the project:
          - Response : 
             - Status Code : `200`       
             - content 
+
                ```javascript
                   [...<products_object>]
                ```    
@@ -81,6 +88,7 @@ Here is some feature of the project:
          - Url params : `None`
          - Headers : `Content-Type: application/json`
          - Data params : 
+
             ```javascript
                {
                   username: string,
@@ -91,6 +99,7 @@ Here is some feature of the project:
          - Response : 
             - Status Code : `200`       
             - content 
+
                ```javascript
                   {
                      success: true,
@@ -105,6 +114,7 @@ Here is some feature of the project:
          - Response : 
             - Status Code : `200`       
             - content 
+            
                ```javascript
                   [...<comment_object>]
                ```    
