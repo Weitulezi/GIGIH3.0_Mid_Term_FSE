@@ -7,6 +7,63 @@ The project using technologies such as **express** for backend and **mongoose** 
 
 ## Database Structure
 
+The tokopedia_play database consist of three collections:
+- videos
+- products
+- comments
+
+Here is the schema of each collections: 
+
+- Video
+```javascript
+   {
+      imageUrl: {
+         type: String,
+         required: true
+      }
+   }
+```
+
+- Product
+```javascript
+   {
+      title: {
+         type: String,
+         required: true
+      },
+      price: {
+         type: Number,
+         required: true
+      },
+      link: {
+         type: String,
+         required: true
+      },
+      video: {
+         type: objectId,
+         ref: "Video"
+      },
+   }
+```
+
+- Comment
+```javascript
+   {
+      username: {
+         type: String,
+         required: true
+      },
+      content: {
+         type: String,
+         required: true
+      },
+      video: {
+         type: objectId,
+         ref: "Video"
+      },
+   }
+```
+
 ## API Structure
 
 * API
